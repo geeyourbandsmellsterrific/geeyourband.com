@@ -20,7 +20,7 @@
     "astro-icon": "^1.1.5",
     "autoprefixer": "^10.4.21",
     "decap-server": "^3.3.0",
-    "marked": "^16.0.0",
+    "marked": "^16.1.0",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.8.3"
   },
