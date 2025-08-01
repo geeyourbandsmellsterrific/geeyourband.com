@@ -16,15 +16,22 @@ export async function getStaticPaths() {
 const details = await getCollection("details");
 const { show } = Astro.props;
 const content = await marked.parse(
-  show.body.replace(/\n(?=\n)/g, "\n\n<br/>\n"),
+  show.body && show.body.trim()
+    ? show.body.replace(/\n(?=\n)/g, "\n\n<br/>\n")
+    : "",
 );
 
 const members = (await getEntries(show.data.member))
   .filter((member) => member.collection === "member")
   .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
 
-// Helper functions moved to front matter
-function parseDateTime(dateStr, timeStr) {
+// Parse date and time strings into ISO format
+// Handles formats like "Sat, Jun 12" for date and "9:32pm" or "11:00am" for time
+// Returns ISO string in UTC with 'Z' suffix
+function parseDateTime(
+  dateStr: string,
+  timeStr: string,
+): Date | string | undefined {
   // Parse date like "Sat, Jun 12"
   const [_, monthStr, dayStr] =
     dateStr?.match(/^[A-Za-z]+,\s([A-Za-z]+)\s(\d{1,2})$/) || [];
@@ -38,22 +45,32 @@ function parseDateTime(dateStr, timeStr) {
     if (timeMatch) {
       hour = parseInt(timeMatch[1], 10);
       minute = parseInt(timeMatch[2], 10);
-      const ampm = timeMatch[3].toLowerCase();
-      if (ampm === "pm" && hour !== 12) hour += 12;
-      if (ampm === "am" && hour === 12) hour = 0;
+      const amPm = timeMatch[3].toLowerCase();
+      if (amPm === "pm" && hour !== 12) hour += 12;
+      if (amPm === "am" && hour === 12) hour = 0;
     }
   }
   // Build local date string
   const localDateStr = `${monthStr} ${dayStr}, ${year} ${hour.toString().padStart(2, "0")}:${minute.toString().padStart(2, "0")}:00`;
 
   // Use show.data.timezone if available, otherwise default to 'America/New_York'
-  const tz = show?.data?.timezone || "America/New_York";
+  // This will not handle daylight saving time correctly, but is sufficient for most cases
+  // EDT: "America/New_York",
+  // EST: "America/New_York",
+  // CDT: "America/Chicago",
+  // CST: "America/Chicago",
+  // MDT: "America/Denver",
+  // MST: "America/Denver",
+  // PDT: "America/Los_Angeles",
+  // PST: "America/Los_Angeles",
+  const tz = show?.data?.timezone || "EDT";
   // Convert to UTC using Intl.DateTimeFormat and Date
   const dateObj = new Date(
     new Date(localDateStr + " " + tz).toLocaleString("en-US", {
       timeZone: "UTC",
     }),
   );
+
   // Format as ISO string with 'Z'
   return dateObj.toISOString().replace(/\.\d{3}Z$/, "Z");
 }
@@ -143,13 +160,15 @@ const addressParts = parseAddress(show.data.locationAddress);
             : `https://${details[0].data.link_website || "geeyourband.com"}/assets/favicons/banner.png`
       : `https://${details[0].data.link_website || "geeyourband.com"}/assets/favicons/banner.png`,
     description:
-      show.body
-        .split(" ")
-        .slice(0, 40)
-        .join(" ")
-        .replace(/[#*_\`]/g, "")
-        .replace(/\[([^\]]+)\]\([^\)]+\)/g, "$1")
-        .trim() + (show.body.split(" ").length > 40 ? "..." : ""),
+      show.body && show.body.trim()
+        ? show.body
+            .split(" ")
+            .slice(0, 40)
+            .join(" ")
+            .replace(/[#*_\`]/g, "")
+            .replace(/\[([^\]]+)\]\([^\)]+\)/g, "$1")
+            .trim() + (show.body.split(" ").length > 40 ? "..." : "")
+        : "",
     performer: [
       {
         "@type": "MusicGroup",
@@ -180,13 +199,15 @@ const addressParts = parseAddress(show.data.locationAddress);
 
 <BaseLayout
   title={show.data.title}
-  description={show.body
-    .split(" ")
-    .slice(0, 20)
-    .join(" ")
-    .replace(/[#*_\`]/g, "")
-    .replace(/\[([^\]]+)\]\([^\)]+\)/g, "$1")
-    .trim() + (show.body.split(" ").length > 20 && "...")}
+  description={show.body && show.body.trim()
+    ? show.body
+        .split(" ")
+        .slice(0, 40)
+        .join(" ")
+        .replace(/[#*_\`]/g, "")
+        .replace(/\[([^\]]+)\]\([^\)]+\)/g, "$1")
+        .trim() + (show.body.split(" ").length > 40 ? "..." : "")
+    : ""}
 >
   <article
     id="show"
@@ -292,7 +313,9 @@ const addressParts = parseAddress(show.data.locationAddress);
             class="flex flex-col justify-left items-stretch gap-4 mx-auto max-w-3xl"
           >
             <div class="flex flex-col justify-center items-stretch gap-2 mb-6 pb-6 border-yellow-400 border-t border-b text-center">
-              <h2 class="pt-4 text-base">Band</h2>
+              <h2 id="the-band" class="pt-4 text-base">
+                The Band
+              </h2>
               <div class="flex-col justify-left items-stretch gap-6 max-[376px]:gap-2 grid grid-cols-3 max-[550px]:grid-cols-2">
                 {members.map((member, index) => (
                   <CardMemberSmall index={index} member={member} />

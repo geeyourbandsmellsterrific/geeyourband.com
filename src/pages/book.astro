@@ -37,7 +37,7 @@ const book_content = await marked.parse(
             <h3 class="font-bold text-pink-400 text-2xl">
               {details[0].data.book_title}
             </h3>
-          <span class="text-yellow-100"><p set:html={book_content} /></span>
+            <span class="text-yellow-100"><p set:html={book_content} /></span>
           </div>
           <ul class="space-y-2">
             {
@@ -103,7 +103,6 @@ const book_content = await marked.parse(
                 >Message</label
               >
               <textarea
-                
                 name="message"
                 placeholder="Tell us about your show"
                 rows={4}
