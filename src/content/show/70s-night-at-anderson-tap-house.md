@@ -1,11 +1,11 @@
 ---
-title: 70's Night at Anderson Tap House
-startDate: Sat, Aug 9, 2025
-startTime: 8:00pm
-endDate: Sun, Aug 10, 2025
-endTime: 12:00am
+title: 70's Night at Hard Rock Cincinnati
+startDate: Sat, Aug 2, 2025
+startTime: 10:00pm
+endDate: Sun, Aug 3, 2025
+endTime: 1:00am
 location: Anderson Tap House
-locationAddress: 7480 Beechmont Ave, Cincinnati, OH 45255
+locationAddress: 1000 Broadway, Cincinnati, OH 45202
 member:
   - allison-wonderland
   - bobby-dingo
