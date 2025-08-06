@@ -1,9 +1,9 @@
 ---
-title: Anderson Tap House
+title: 70's Dance Party in Anderson
 startDate: Sat, Aug 9
-startTime: 4:00pm
-endDate: Sat, Aug 9
-endTime: 5:00pm
+startTime: 8:00pm
+endDate: Sun, Aug 10
+endTime: 12:00am
 timezone: EDT
 location: Anderson Tap House
 locationAddress: 7480 Beechmont Ave, Cincinnati, OH 45255
@@ -15,9 +15,5 @@ member:
   - tommy-salami
   - will-power
 ---
-Anderson Tap House
 
-Saturday, August 9 4:00 – 5:00pm
-
-Anderson Tap House\
-7480 Beechmont Ave, Cincinnati, OH 45255
+Get ready to boogie! Gee, Your Band Smells Terrific brings a night of nonstop '70s dance hits to Anderson Tap House. Break out your bell bottoms and get down to funky grooves, disco classics, and retro vibes all night long. Don’t miss this far-out 70s dance party experience!
