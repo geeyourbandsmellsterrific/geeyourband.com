@@ -5,7 +5,7 @@ startTime: 7:00pm
 endDate: Sat, Aug 16
 endTime: 10:00pm
 timezone: EDT
-location: ""
+location: Downtown Montgomery
 locationAddress: 9300 Montgomery Rd, Montgomery, OH 45242
 member:
   - allison-wonderland
