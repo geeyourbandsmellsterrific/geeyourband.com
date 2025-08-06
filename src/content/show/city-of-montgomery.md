@@ -15,5 +15,4 @@ member:
   - tommy-salami
   - will-power
 ---
-
-Join Gee, Your Band Smells Terrific for a groovy '70s dance party in Montgomery, OH! Enjoy vintage cars, giant outdoor games, delicious food, and drinks while we keep the disco vibes alive with all your favorite hits. It's a far-out celebration of music, fun, and retro flair—don’t miss it!
+Join Gee, Your Band Smells Terrific for a groovy '70s dance party in downtown Montgomery, OH! Enjoy vintage cars, giant outdoor games, delicious food, and drinks while we keep the disco vibes alive with all your favorite hits. It's a far-out celebration of music, fun, and retro flair—don’t miss it!
