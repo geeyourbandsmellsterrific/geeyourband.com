@@ -1,5 +1,5 @@
 ---
-title: Vintage 70s Night in Montgomery
+title: Vintage 70s Dance-fest at Montgomery Dora Party
 startDate: Sat, Aug 16
 startTime: 7:00pm
 endDate: Sat, Aug 16
