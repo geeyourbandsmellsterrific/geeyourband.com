@@ -1,8 +1,8 @@
 ---
 title: Gee, Your Band Smells Terrific at St. Mary FunFest 2025
-startDate: Fri, Aug 15, 2025
+startDate: Fri, Aug 15
 startTime: 7:00 PM
-endDate: Fri, Aug 15, 2025
+endDate: Fri, Aug 15
 endTime: 11:00 PM
 location: St. Mary Hyde Park
 locationAddress: 2845 Erie Ave, Cincinnati, OH 45208

@@ -1,7 +1,7 @@
 {
   "name": "geeyourband",
   "type": "module",
-  "version": "1.26.0",
+  "version": "1.27.0",
   "scripts": {
     "astro": "astro dev",
     "decap": "npx decap-server",
@@ -12,16 +12,16 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/sitemap": "^3.4.2",
+    "@astrojs/sitemap": "^3.5.0",
     "@fontsource-variable/fredoka": "^5.2.8",
     "@fontsource-variable/geologica": "^5.2.6",
-    "@tailwindcss/vite": "^4.1.11",
-    "astro": "^5.12.9",
+    "@tailwindcss/vite": "^4.1.12",
+    "astro": "^5.13.2",
     "astro-icon": "^1.1.5",
     "autoprefixer": "^10.4.21",
     "decap-server": "^3.3.1",
     "marked": "^16.1.2",
-    "tailwindcss": "^4.1.11",
+    "tailwindcss": "^4.1.12",
     "typescript": "^5.9.2"
   },
   "devDependencies": {
