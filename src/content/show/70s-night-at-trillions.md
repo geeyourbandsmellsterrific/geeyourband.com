@@ -1,8 +1,8 @@
 ---
 title: 70s Night at Trillions
-startDate: Fri, September 4
+startDate: Fri, October 4
 startTime: 8:00pm
-endDate: Fri, September 4
+endDate: Fri, October 4
 endTime: 12:00am
 location: Trillions Sports Bar and Grill
 locationAddress: 9933 Cincinnati Columbus Rd, West Chester Township, OH 45241
