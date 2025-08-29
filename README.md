@@ -1,8 +1,8 @@
-# Output Starter Kit
+# Gee, Your Band Smells Terrific (GYBST)
 
-**Output Starter Kit for Output Websites - Output Websites builds fully-custom websites tailored to the unique needs of small and local businesses.**
+**Gee, Your Band Smells Terrific - Website for Gee, Your Band Smells Terrific - Cincinnati, Ohio’s premier 1970s showcase & dance band playing super hits of the 70s!**
 
-_(This repository contains the Website Starter Kit for Output Websites.)_
+_(This repository contains the Website for Gee, Your Band Smells Terrific.)_
 _[Website, Web Design]_
 
 **Made Using:** [Astro v5](https://astro.build "Astro.build Homepage"), [Astro Icon](https://astroicon.dev "AstroIcon.dev Homepage"), [Sitemap Astro Integration](https://docs.astro.build/en/guides/integrations-guide/sitemap "Astro Sitemap Docs"), [Tailwind CSS Astro Integration](https://docs.astro.build/en/guides/integrations-guide/tailwind "Astro Tailwind CSS Docs"), [Autoprefixer](https://npmjs.com/package/autoprefixer "Autoprefixer NPM Listing"), [Decap CMS](https://decapcms.org "DecapCMS.org Homepage"), [Netlify](https://netlify.com "Netlify.com Homepage")
@@ -11,20 +11,19 @@ _[Website, Web Design]_
 
 ## Links
 
-* **Output Starter Kit Demo Website:** [outputstarter.netlify.app](https://outputstarter.netlify.app "Output Starter Kit Demo")
-* **Output Starter Kit GitHub:** [github.com/outputwebsites/starter](https://github.com/outputwebsites/starter "Output Starter Kit GitHub Repository")
-* **Output Websites Website:** [OutputWebsites.com](https://OutputWebsites.com "OutputWebsites.com Homepage")
+* **Gee, Your Band Smells Terrific Website:** [GeeYourBand.com](https://GeeYourBand.com "GeeYourBand.com Homepage")
+* **GitHub Repo:** [Gee, Your Band Smells Terrific Website GitHub Repository](https://github.com/geeyourbandsmellsterrific/geeyourband.com "Gee, Your Band Smells Terrific Website GitHub Repository")
 * **Website By:** [Derek Perry - derek-perry.com](https://derek-perry.com "Derek-Perry.com Homepage")
 
 ---
 
 ## Copyright/License Information
 
-**Copyright © 2025 [Output Websites LLC](https://OutputWebsites.com "OutputWebsites.com Homepage")**
+**Copyright © 2025 [Gee, Your Band Smells Terrific](https://GeeYourBand.com "GeeYourBand.com Homepage")**
 
 **Some rights reserved.**
 
-Use of [the code for the Output Starter Kit](https://github.com/outputwebsites/stater "Output Starter Kit GitHub Repository") is licensed under the [Creative Commons Zero v1.0 Universal license](https://creativecommons.org/publicdomain/zero/1.0).
+Use of [the code for the Gee, Your Band Smells Terrific Website](https://github.com/geeyourbandsmellsterrific/geeyourband.com "Gee, Your Band Smells Terrific Website GitHub Repository") is licensed under the [Creative Commons Zero v1.0 Universal license](https://creativecommons.org/publicdomain/zero/1.0).
 
 The [Output Starter Kit](https://github.com/outputwebsites/stater "Output Starter Kit GitHub Repository") is forked from [Intermediate Astro v4 Decap CMS](https://github.com/CodeStitchOfficial/Intermediate-Astro-v4-Decap-CMS "Intermediate Astro v4 Decap CMS GitHub Repository") (created and maintained by [BuckyBuck135](https://github.com/BuckyBuck135)) which is forked from the [CodeStitch Intermediate-Website-Kit-LESS](https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-LESS "CodeStitch Intermediate-Website-Kit-LESS GitHub Repository").
 
@@ -42,6 +41,8 @@ Use of [CodeStitch Intermediate-Website-Kit-LESS](https://github.com/CodeStitchO
 2. Open a cmd window in the root of that cloned folder.
 3. Run `npm install` to install all dependencies.
 4. Run `npm run dev` to start the project and spin up a development server on `localhost:4321` and a Decap CMS admin server. Access the admin dashboard at `localhost:4321/admin`.
+
+NOTE: Run `npx @astrojs/upgrade` to upgrade Astro-related dependencies.
 
 ### Configuration
 

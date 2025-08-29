@@ -1,8 +1,8 @@
 ---
 title: 70s Night at Party in the Park
-startDate: Sat, September 13
+startDate: Sat, Sep 13
 startTime: 7:00pm
-endDate: Sat, September 13
+endDate: Sat, Sep 13
 endTime: 10:00pm
 location: Chamberlin Park
 locationAddress: 7640 Plainfield Rd, Deer Park, OH, United States, Ohio 45236

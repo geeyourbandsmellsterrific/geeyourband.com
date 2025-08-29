@@ -1,8 +1,8 @@
 ---
 title: Gee, Your Band Smells Terrific at Oktoberfest Zinzinnati
-startDate: Sat, September 20
+startDate: Sat, Sep 20
 startTime: 4:30pm
-endDate: Sat, September 20
+endDate: Sat, Sep 20
 endTime: 7:30pm
 location: River Stage
 locationAddress: 705 E Pete Rose Way, Cincinnati, OH 45202
