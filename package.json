@@ -15,7 +15,7 @@
     "@astrojs/sitemap": "^3.5.1",
     "@fontsource-variable/fredoka": "^5.2.8",
     "@fontsource-variable/geologica": "^5.2.6",
-    "@tailwindcss/vite": "^4.1.12",
+    "@tailwindcss/vite": "^4.1.13",
     "astro": "^5.13.5",
     "astro-icon": "^1.1.5",
     "autoprefixer": "^10.4.21",
