@@ -1,5 +1,5 @@
 ---
-title: 70s Night at Bleachers Sports Bar
+title: 70s Night at Bleachers
 startDate: Fri, Oct 3
 startTime: 8:00pm
 endDate: Fri, Oct 3
