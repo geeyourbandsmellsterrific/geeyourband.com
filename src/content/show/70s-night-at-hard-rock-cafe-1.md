@@ -4,7 +4,7 @@ startDate: Sat, Nov 1
 startTime: 10:00 PM
 endDate: Sat, Nov 1
 endTime: 1:00 AM
-location: Hard Rock Cafe
+location: Hard Rock Cafe Cincinnati
 locationAddress: 1000 Broadway, Cincinnati, OH 45202
 member:
   - allison-wonderland
