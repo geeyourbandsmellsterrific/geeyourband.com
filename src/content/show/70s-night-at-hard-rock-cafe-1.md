@@ -1,5 +1,5 @@
 ---
-title: 70s Night at Hard Rock Cafe
+title: 70s Night at Hard Rock Cafe with Gee, Your Band Smells Terrific
 startDate: Sat, Nov 1
 startTime: 10:00 PM
 endDate: Sat, Nov 1
