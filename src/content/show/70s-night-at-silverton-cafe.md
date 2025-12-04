@@ -5,6 +5,7 @@ startTime: 8:00pm
 endDate: Fri, Dec 5
 endTime: 12:00am
 location: Silverton Cafe
+locationAddress: 7201 Montgomery Rd, Cincinnati, OH
 member:
   - allison-wonderland
   - bobby-dingo
