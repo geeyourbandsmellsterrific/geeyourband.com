@@ -7,5 +7,5 @@ bio: ""
 main: true
 order: 7
 photoColor: "#ff637e"
-photo: src/assets/images/media/will-power.webp
+photo: /public/assets/images/will-power.webp
 ---

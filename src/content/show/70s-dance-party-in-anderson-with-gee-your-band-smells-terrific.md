@@ -13,4 +13,5 @@ member:
   - leo-dynamite
   - tommy-salami
   - will-power
+image: ""
 ---

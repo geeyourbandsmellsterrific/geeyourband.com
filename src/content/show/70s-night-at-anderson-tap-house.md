@@ -13,7 +13,7 @@ member:
   - leo-dynamite
   - tommy-salami
   - will-power
-image: src/assets/images/media/anderson-tap-house-logo_3.png
+image: /public/assets/images/anderson-tap-house-logo_3.png
 imageAlt: Gee, Your Band Smells Terrific at Anderson Tap House January 10 at 8:00 PM
 ---
 Dance the night away to your favorite hits of the 1970's with Gee, Your Band Smells Terrific — Cincinnati's premier 70's showcase and party band. Don't forget your boogie shoes! 🕺

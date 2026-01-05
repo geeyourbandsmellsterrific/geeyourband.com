@@ -7,5 +7,5 @@ bio: ""
 main: true
 order: 4
 photoColor: "#0084d1"
-photo: src/assets/images/media/bobby-dingo.webp
+photo: /public/assets/images/bobby-dingo.webp
 ---

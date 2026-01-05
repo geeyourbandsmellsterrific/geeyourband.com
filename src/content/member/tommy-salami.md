@@ -7,5 +7,5 @@ bio: ""
 main: true
 order: 3
 photoColor: "#9ae600"
-photo: src/assets/images/media/tommy-salami.webp
+photo: /public/assets/images/tommy-salami.webp
 ---

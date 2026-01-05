@@ -6,8 +6,8 @@ backend:
 local_backend: true
 editor:
   preview: false
-media_folder: src/assets/images/media # Location where files will be stored in the repo - we store them in src so that Astro can optimize them.
-public_folder: src/assets/images/media # Ensure that this path is the same as the media_folder path above.
+media_folder: /public/assets/images # Store uploads under public so Decap writes public assets.
+public_folder: /public/assets/images # URL path used in frontmatter (e.g. /assets/images/file.png).
 logo_url: https://geeyourband.com/logo.svg # change url to a link to the image you want to use, no file paths, must be a URL
 display_url: https://geeyourband.com
 collections:

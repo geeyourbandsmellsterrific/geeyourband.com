@@ -7,7 +7,7 @@ member:
   - leo-dynamite
   - tommy-salami
   - will-power
-image: src/assets/images/media/a-concert-for-cats.webp
+image: /public/assets/images/a-concert-for-cats.webp
 startDate: "Sat, Jun 21"
 startTime: "8:00pm"
 endDate: "Sat, Jun 21"

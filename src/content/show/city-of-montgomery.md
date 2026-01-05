@@ -14,7 +14,7 @@ member:
   - leo-dynamite
   - tommy-salami
   - will-power
-image: src/assets/images/media/august-2025-dora-party-scaled.jpg
+image: /public/assets/images/august-2025-dora-party-scaled.jpg
 imageAlt: Poster for 70s Dora Party in Montgomery OH with Gee, Your Band Smells Terrific
 ---
 Join Gee, Your Band Smells Terrific for a groovy '70s dance party in downtown Montgomery, OH! Enjoy vintage cars, giant outdoor games, delicious food, and drinks while we keep the disco vibes alive with all your favorite hits. It's a far-out celebration of music, fun, and retro flair—don’t miss it!

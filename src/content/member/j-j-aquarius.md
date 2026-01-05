@@ -7,5 +7,5 @@ bio: ""
 main: true
 order: 6
 photoColor: "#ffb900"
-photo: src/assets/images/media/jj-aquarius.webp
+photo: /public/assets/images/jj-aquarius.webp
 ---

@@ -13,6 +13,6 @@ member:
   - leo-dynamite
   - tommy-salami
   - will-power
-image: src/assets/images/media/3a1dfb503ad2779157ded3debb038c96462a04bb.avif
+image: /public/assets/images/3a1dfb503ad2779157ded3debb038c96462a04bb.avif
 ---
 Boogey down to the super hits of the 70s at St. Mary FunFest on Friday, August 15 starting at 7:00 PM with Cincinnati's premier 70s showcase band Gee, Your Band Smells Terrific.
