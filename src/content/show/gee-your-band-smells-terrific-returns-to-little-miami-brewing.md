@@ -1,8 +1,8 @@
 ---
 title: Gee, Your Band Smells Terrific Returns to Little Miami Brewing
-startDate: Sat, Dec 6
+startDate: Dec 6, 2025
 startTime: 7:30pm
-endDate: Sat, Dec 6
+endDate: Dec 6, 2025
 endTime: 10:30pm
 location: Little Miami Brewing Co.
 locationAddress: 208 Mill St, Milford, OH

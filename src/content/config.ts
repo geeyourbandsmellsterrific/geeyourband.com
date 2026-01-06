@@ -42,7 +42,6 @@ const showsCollection = defineCollection({
 			startTime: z.string(),
 			endDate: z.string(),
 			endTime: z.string(),
-			timezone: z.string().optional(),
 			location: z.string().optional(),
 			locationAddress: z.string().optional(),
 			tags: z.array(z.string()).optional(),

@@ -65,11 +65,10 @@ collections:
   create: true # Allow users to create new documents in this collection
   fields:
   - { label: "Title", name: "title", widget: "string", hint: "Keep titles brief yet descriptive." }
-  - { label: "Start Date", name: "startDate", widget: "string", hint: "Start date of the show. (ie Fri, Jun 16 | Sat, Apr 14 | Sun, Aug 9)" }
-  - { label: "Start Time", name: "startTime", widget: "string", hint: "Start time of the show. (ie 7:00pm, 11:30am, 1:15am, 9:30pm)" }
-  - { label: "End Date", name: "endDate", widget: "string", hint: "End date of the show. (ie Fri, Jun 16 | Sat, Apr 14 | Sun, Aug 9)" }
-  - { label: "End Time", name: "endTime", widget: "string", hint: "Time the end of the show is in. (ie 7:00pm, 11:30am, 1:15am, 9:30pm)" }
-  - { label: "Timezone", name: "timezone", widget: "string", required: false, hint: "Timezone the show is in. (ie EST, EDT, CST, CDT) | Default = EDT" }
+  - { label: "Start Date", name: "startDate", widget: "string", hint: "Start date of the show using the shortened month, day of the month, and the full year. (ie Jun 16, 2027 | Apr 14, 2022 | Aug 9, 2025)" }
+  - { label: "Start Time", name: "startTime", widget: "string", hint: "Start time of the show using lowercase am/pm with no space between time and the am/pm. (ie 7:00pm, 11:30am, 1:15am, 9:30pm)" }
+  - { label: "End Date", name: "endDate", widget: "string", hint: "End date of the show using the shortened month, day of the month, and the full year. (ie Jun 16, 2027 | Apr 14, 2022 | Aug 9, 2025)" }
+  - { label: "End Time", name: "endTime", widget: "string", hint: "End time of the show using lowercase am/pm with no space between time and the am/pm. (ie 7:00pm, 11:30am, 1:15am, 9:30pm)" }
   - { label: "Location Name", name: "location", widget: "string", required: false, hint: "Name of the venue the show is in. (ie The White House, Hard Rock Miami, McDonald's)" }
   - { label: "Location Address", name: "locationAddress", widget: "string", required: false, hint: "Exact address the show is located at. (ie 123 Wallaby Way, Cincinnati, OH 45213" }
   - { label: "Member", name: "member", widget: relation, collection: member, multiple: true, search_fields: [ "name" ], display_fields: [ "name" ], value_field: "{{slug}}", hint: "Select the member(s) in the show." }

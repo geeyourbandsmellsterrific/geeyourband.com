@@ -1,8 +1,8 @@
 ---
 title: 70s Night at Bleachers
-startDate: Fri, Oct 3
+startDate: Oct 3, 2025
 startTime: 8:00pm
-endDate: Fri, Oct 3
+endDate: Oct 3, 2025
 endTime: 12:00am
 location: Bleachers Sports Bar
 locationAddress: 2515 Ritchie Ave, Crescent Springs, KY 41017

@@ -1,10 +1,9 @@
 ---
 title: 70's Dance Party in Anderson
-startDate: Sat, Aug 9
+startDate: Aug 9, 2025
 startTime: 8:00pm
-endDate: Sat, Aug 9
+endDate: Aug 9, 2025
 endTime: 12:00am
-timezone: EDT
 location: Anderson Tap House
 locationAddress: 7480 Beechmont Ave, Cincinnati, OH 45255
 member:

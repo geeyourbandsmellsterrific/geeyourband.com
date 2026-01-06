@@ -1,123 +1,21 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from "src/layouts/BaseLayout.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
 import CardShow from "@components/CardShow.astro";
+import { parseShowStart } from "@utils/utils.ts";
 
 const details = await getCollection("details");
-const today = new Date();
-today.setHours(0, 0, 0, 0);
 
 const shows = (await getCollection("show"))
   .filter((show) => {
-    // Parse "Sat, Jun 19" as MM-DD of current year
-    const [_, monthStr, dayStr] = show.data.startDate.split(" ");
-    const month = new Date(`${monthStr} 1, 2000`).getMonth(); // get month index
-    const day = parseInt(dayStr, 10);
-    const year = new Date().getFullYear();
-
-    // Determine timezone offset in hours
-    let tzOffset = 0;
-    switch (show.data.timezone) {
-      case "EDT":
-      case "EST":
-        tzOffset = -4; // EDT is UTC-4, EST is UTC-5, but for summer assume -4
-        break;
-      case "CDT":
-      case "CST":
-        tzOffset = -5; // CDT is UTC-5, CST is UTC-6, but for summer assume -5
-        break;
-      case "MDT":
-      case "MST":
-        tzOffset = -6; // MDT is UTC-6, MST is UTC-7, but for summer assume -6
-        break;
-      case "PDT":
-      case "PST":
-        tzOffset = -7; // PDT is UTC-7, PST is UTC-8, but for summer assume -7
-        break;
-      default:
-        tzOffset = 0;
-    }
-
-    // Create show date in UTC, then adjust for timezone
-    const showDate = new Date(Date.UTC(year, month, day));
-    showDate.setUTCHours(0, 0, 0, 0);
-    showDate.setUTCHours(showDate.getUTCHours() - tzOffset);
-
-    // Get today's date in UTC for comparison
-    const todayUTC = new Date();
-    todayUTC.setUTCHours(0, 0, 0, 0);
-
-    return showDate >= todayUTC;
+    const now = new Date();
+    const start = parseShowStart(show);
+    return start >= now;
   })
   .sort((a, b) => {
-    const [_, amonthStr, adayStr] = a.data.startDate.split(" ");
-    const [__, bmonthStr, bdayStr] = b.data.startDate.split(" ");
-    const year = new Date().getFullYear();
-
-    let aOffset = 0,
-      bOffset = 0;
-    switch (a.data.timezone) {
-      case "EDT":
-      case "EST":
-        aOffset = -4;
-        break;
-      case "CDT":
-      case "CST":
-        aOffset = -5;
-        break;
-      case "MDT":
-      case "MST":
-        aOffset = -6;
-        break;
-      case "PDT":
-      case "PST":
-        aOffset = -7;
-        break;
-      default:
-        aOffset = 0;
-    }
-    switch (b.data.timezone) {
-      case "EDT":
-      case "EST":
-        bOffset = -4;
-        break;
-      case "CDT":
-      case "CST":
-        bOffset = -5;
-        break;
-      case "MDT":
-      case "MST":
-        bOffset = -6;
-        break;
-      case "PDT":
-      case "PST":
-        bOffset = -7;
-        break;
-      default:
-        bOffset = 0;
-    }
-
-    const adate = new Date(
-      Date.UTC(
-        year,
-        new Date(`${amonthStr} 1, 2000`).getMonth(),
-        parseInt(adayStr, 10),
-      ),
-    );
-    adate.setUTCHours(0, 0, 0, 0);
-    adate.setUTCHours(adate.getUTCHours() - aOffset);
-
-    const bdate = new Date(
-      Date.UTC(
-        year,
-        new Date(`${bmonthStr} 1, 2000`).getMonth(),
-        parseInt(bdayStr, 10),
-      ),
-    );
-    bdate.setUTCHours(0, 0, 0, 0);
-    bdate.setUTCHours(bdate.getUTCHours() - bOffset);
-
-    return adate.getTime() - bdate.getTime();
+    const aStart = parseShowStart(a);
+    const bStart = parseShowStart(b);
+    return aStart.getTime() - bStart.getTime();
   });
 ---
 

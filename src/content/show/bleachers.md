@@ -7,13 +7,12 @@ member:
   - leo-dynamite
   - tommy-salami
   - will-power
-startDate: "Fri, Jul 18"
-startTime: "10:00am"
-endDate: "Fri, Jul 18"
-endTime: "11:00am"
-timezone: "EDT"
-location: "Bleachers"
-locationAddress: "2515 Ritchie St, Crescent Springs, KY 41017"
+startDate: Jul 18, 2025
+startTime: 10:00am
+endDate: Jul 18, 2025
+endTime: 11:00am
+location: Bleachers
+locationAddress: 2515 Ritchie St, Crescent Springs, KY 41017
 ---
 Bleachers
 

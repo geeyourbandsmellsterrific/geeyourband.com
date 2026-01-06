@@ -1,7 +1,7 @@
 {
   "name": "geeyourband",
   "type": "module",
-  "version": "1.29.0",
+  "version": "1.31.0",
   "scripts": {
     "astro": "astro dev",
     "decap": "npx decap-server",

@@ -1,8 +1,8 @@
 ---
 title: 70s Night at Silverton Cafe
-startDate: Fri, Dec 5
+startDate: Dec 5, 2025
 startTime: 8:00pm
-endDate: Fri, Dec 5
+endDate: Dec 5, 2025
 endTime: 12:00am
 location: Silverton Cafe
 locationAddress: 7201 Montgomery Rd, Cincinnati, OH

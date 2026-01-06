@@ -1,8 +1,8 @@
 ---
 title: 70's Night at Hard Rock Cincinnati
-startDate: Sat, Aug 2
+startDate: Aug 2, 2025
 startTime: 10:00pm
-endDate: Sun, Aug 3
+endDate: Aug 3, 2025
 endTime: 1:00am
 location: Hard Rock Cafe Cincinnati
 locationAddress: 1000 Broadway, Cincinnati, OH 45202

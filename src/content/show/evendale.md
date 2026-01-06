@@ -1,10 +1,9 @@
 ---
 title: Evendale
-startDate: Sat, Jul 19
+startDate: Jul 19, 2025
 startTime: 7:00pm
-endDate: Sat, Jul 19
+endDate: Jul 19, 2025
 endTime: 9:30pm
-timezone: EDT
 location: Evendale Municipal Complex
 locationAddress: 10500 Reading Rd, Cincinnati, OH 45241
 member:

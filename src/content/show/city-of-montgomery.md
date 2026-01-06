@@ -1,10 +1,9 @@
 ---
 title: 70s Dance Night in Montgomery
-startDate: Sat, Aug 16
+startDate: Aug 16, 2025
 startTime: 7:00pm
-endDate: Sat, Aug 16
+endDate: Aug 16, 2025
 endTime: 10:00pm
-timezone: EDT
 location: Downtown Montgomery
 locationAddress: 9300 Montgomery Rd, Montgomery, OH 45242
 member:

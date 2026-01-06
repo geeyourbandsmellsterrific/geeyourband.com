@@ -1,9 +1,9 @@
 ---
 title: 70s Night at Hollywood Casino with Gee, Your Band Smells Terrific
-startDate: Fri, Nov 7
-startTime: 8:00 PM
-endDate: Fri, Nov 7
-endTime: 11:30 PM
+startDate: Nov 7, 2025
+startTime: 8:00pm
+endDate: Nov 7, 2025
+endTime: 11:30pm
 location: Hollywood Casino & Hotel Lawrenceburg
 locationAddress: 777 Hollywood Blvd, Lawrenceburg, IN 47025
 member:

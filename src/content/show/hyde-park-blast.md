@@ -7,13 +7,12 @@ member:
   - leo-dynamite
   - tommy-salami
   - will-power
-startDate: "Sat, Jun 28"
-startTime: "4:00pm"
-endDate: "Sat, Jun 28"
-endTime: "7:00pm"
-timezone: "EDT"
-location: "Hyde Park Square"
-locationAddress: "2700 Erie Ave, Cincinnati, OH 45208"
+startDate: Jun 28, 2025
+startTime: 4:00pm
+endDate: Jun 28, 2025
+endTime: 7:00pm
+location: Hyde Park Square
+locationAddress: 2700 Erie Ave, Cincinnati, OH 45208
 ---
 Hyde Park Blast
 

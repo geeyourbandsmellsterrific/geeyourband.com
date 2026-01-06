@@ -8,6 +8,27 @@ export interface Props {
 }
 
 const { show, index } = Astro.props;
+
+function formatDisplayWithWeekday(raw) {
+  if (!raw) return "";
+  const dr = raw.toString();
+  // remove any leading weekday like "Sat, " for parsing
+  const withoutWeekday = dr.replace(/^[A-Za-z]{3},\s*/, "");
+  // ensure a year exists for reliable parsing
+  const hasYear = /\d{4}/.test(withoutWeekday);
+  const parseStr = hasYear ? withoutWeekday : `${withoutWeekday}, ${new Date().getFullYear()}`;
+  const d = new Date(parseStr);
+  if (!Number.isNaN(d.getTime())) {
+    const weekday = d.toLocaleString("en-US", { weekday: "short" });
+    const monthDay = withoutWeekday.replace(/,.*$/, "");
+    return `${weekday}, ${monthDay}`;
+  }
+  // fallback: strip year and return
+  return dr.replace(/,.*$/, "");
+}
+
+const startDisplay = formatDisplayWithWeekday(show.data.startDate ?? "");
+const endDisplay = formatDisplayWithWeekday(show.data.endDate ?? "");
 ---
 
 <a
@@ -32,16 +53,16 @@ const { show, index } = Astro.props;
           </p>
           <div class="flex flex-col items-center gap-2">
             <span class="font-medium text-white text-lg">
-              {show.data.startDate}{
-                show.data.startDate !== show.data.endDate
-                  ? " – " + show.data.endDate
+              {startDisplay}{
+                startDisplay !== endDisplay
+                  ? " – " + endDisplay
                   : ""
               }
             </span>
             <span
               class="bg-pink-700/80 shadow-sm px-3 py-1 rounded-full font-bold text-white text-lg"
             >
-              {show.data.startTime}
+              {show.data.startTime} – {show.data.endTime}
             </span>
           </div>
         </div>

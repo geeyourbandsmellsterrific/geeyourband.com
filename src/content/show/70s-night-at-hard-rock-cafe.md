@@ -1,8 +1,8 @@
 ---
 title: 70s Night at Hard Rock Cafe
-startDate: Fri, Sep 12
+startDate: Sep 12, 2025
 startTime: 10:00pm
-endDate: Fri, Sep 12
+endDate: Sep 12, 2025
 endTime: 1:00am
 location: Hard Rock Cafe
 locationAddress: 1000 Broadway, Cincinnati, OH 45202

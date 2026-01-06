@@ -1,8 +1,8 @@
 ---
 title: Gee, Your Band Smells Terrific at Bengals Tailgate!
-startDate: Sun, Sep 14
+startDate: Sep 14, 2025
 startTime: 10:00am
-endDate: Sun, Sep 14
+endDate: Sep 14, 2025
 endTime: 1:00pm
 location: Fountain Square
 locationAddress: 520 Vine St. Cincinnati, OH 45202

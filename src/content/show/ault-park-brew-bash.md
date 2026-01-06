@@ -1,8 +1,8 @@
 ---
 title: Ault Park Brew Bash
-startDate: Fri, Oct 24
+startDate: Oct 24, 2025
 startTime: 6:00pm
-endDate: Fri, Oct 24
+endDate: Oct 24, 2025
 endTime: 10:00pm
 location: Ault Park Pavilion
 locationAddress: 5090 Observatory Cir, Cincinnati, OH 45208

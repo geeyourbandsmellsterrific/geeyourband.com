@@ -1,9 +1,9 @@
 ---
 title: 70s Night at Hard Rock Cafe with Gee, Your Band Smells Terrific
-startDate: Sat, Nov 1
-startTime: 10:00 PM
-endDate: Sat, Nov 1
-endTime: 1:00 AM
+startDate: Nov 1, 2025
+startTime: 10:00pm
+endDate: Nov 1, 2025
+endTime: 1:00am
 location: Hard Rock Cafe Cincinnati
 locationAddress: 1000 Broadway, Cincinnati, OH 45202
 member:

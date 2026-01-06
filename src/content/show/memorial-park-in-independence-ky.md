@@ -1,10 +1,9 @@
 ---
 title: Memorial Park in Independence, KY
-startDate: Thu, Jun 26
+startDate: Jun 26, 2025
 startTime: 7:00pm
-endDate: Thu, Jun 26
+endDate: Jun 26, 2025
 endTime: 10:00pm
-timezone: EDT
 location: Memorial Park
 locationAddress: 2001 Jackwoods Pkwy, Independence, KY 41051
 member:
