@@ -3,7 +3,11 @@ import { getCollection, getEntries } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import CardMemberSmall from "@components/CardMemberSmall.astro";
 import { marked } from "marked";
-import { parseDateTime, formatDisplayWithWeekday, parseAddress } from "@utils/utils.ts";
+import {
+  parseDateTime,
+  formatDisplayWithWeekday,
+  parseAddress,
+} from "@utils/utils.ts";
 import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
@@ -182,7 +186,7 @@ const addressParts = parseAddress(show.data.locationAddress);
     <section id="show-info" class="flex flex-col gap-4 mx-auto mt-8 max-w-3xl">
       <section
         id="show-details"
-        class="flex flex-col justify-center items-center gap-4 mb-8 text-center"
+        class="flex flex-col justify-center items-center gap-4 mb-4 text-center"
       >
         <h1 id={show.data.title}>{show.data.title}</h1>
         <div class="flex flex-col items-center gap-4 w-full">
@@ -229,9 +233,7 @@ const addressParts = parseAddress(show.data.locationAddress);
           <div class="flex flex-col items-center gap-2">
             <span class="font-medium text-white text-lg">
               {startDisplay}{
-                startDisplay !== endDisplay
-                  ? " – " + endDisplay
-                  : ""
+                startDisplay !== endDisplay ? " – " + endDisplay : ""
               }
             </span>
             <span
@@ -243,10 +245,19 @@ const addressParts = parseAddress(show.data.locationAddress);
         </div>
       </section>
 
+      <section
+        id="content"
+        class="flex flex-col justify-left items-stretch gap-4 mx-auto max-w-3xl"
+      >
+        <div id="show-content" class="mx-auto max-w-3xl overflow-auto">
+          <p set:html={content} />
+        </div>
+      </section>
+
       {
         members.length !== 0 && (
           <section
-            id="members-and-content"
+            id="members"
             class="flex flex-col justify-left items-stretch gap-4 mx-auto max-w-3xl"
           >
             <div class="flex flex-col justify-center items-stretch gap-2 mb-6 pb-6 border-yellow-400 border-t border-b text-center">
@@ -258,10 +269,6 @@ const addressParts = parseAddress(show.data.locationAddress);
                   <CardMemberSmall index={index} member={member} />
                 ))}
               </div>
-            </div>
-
-            <div id="show-content" class="mx-auto max-w-3xl overflow-auto">
-              <p set:html={content} />
             </div>
           </section>
         )
