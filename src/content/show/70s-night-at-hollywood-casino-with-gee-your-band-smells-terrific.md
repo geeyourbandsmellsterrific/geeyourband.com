@@ -1,8 +1,8 @@
 ---
 title: 70s Night at Hollywood Casino
-startDate: Apr 17, 2025
+startDate: Apr 17, 2026
 startTime: 7:00pm
-endDate: Apr 17, 2025
+endDate: Apr 17, 2026
 endTime: 10:30pm
 location: Hollywood Casino & Hotel Lawrenceburg
 locationAddress: 777 Hollywood Blvd, Lawrenceburg, IN 47025
