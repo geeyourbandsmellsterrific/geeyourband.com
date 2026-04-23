@@ -42,3 +42,5 @@ Be part of the broadcast. 🪩
 ⸻
 
 🎟 $5 tickets
+
+Get your tickets here -> http://www.cincyticket.com/GYBST
