@@ -3,7 +3,7 @@ title: 70s Night at Bleachers
 startDate: Apr 24, 2026
 startTime: 8:30pm
 endDate: Apr 24, 2026
-endTime: 11:59pm
+endTime: 12:30am
 location: Bleachers Sports Bar 2.0
 locationAddress: 2515 Ritchie St, Crescent Springs, KY, United States, 41017
 member:
