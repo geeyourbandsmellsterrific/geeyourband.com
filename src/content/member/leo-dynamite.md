@@ -1,5 +1,5 @@
 ---
-name: Leo Dynamite
+name: Leo Dynomite
 real_name: ""
 adjective: Dancing
 instrument: Vocalist
