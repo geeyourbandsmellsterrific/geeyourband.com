@@ -13,4 +13,5 @@ member:
   - leo-dynamite
   - tommy-salami
   - will-power
+image: /public/assets/images/america-250-2.png
 ---
