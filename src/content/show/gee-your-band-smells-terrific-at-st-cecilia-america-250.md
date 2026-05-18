@@ -14,3 +14,4 @@ member:
   - tommy-salami
   - will-power
 ---
+Thanks for having us!
