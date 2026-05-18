@@ -15,3 +15,8 @@ member:
   - will-power
 image: /public/assets/images/america-250-2-1-.png
 ---
+Celebrate America 250 with a summer night of 70s super hits from Gee, Your Band Smells Terrific!🪩
+
+Disco, yacht rock, funk, singalongs, dancing, cold drinks, festival food, and Rozzi fireworks to close out the night.
+
+Fun for all ages! Join us at St. Cecilia’s for one groovy summer celebration! 6–10pm
