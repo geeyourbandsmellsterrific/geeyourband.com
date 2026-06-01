@@ -1,8 +1,8 @@
 ---
 title: Independence KY Party at the Park
-startDate: Thur, Jun 11, 2026
+startDate: Thu, Jun 11, 2026
 startTime: 6:00pm
-endDate: Thur, Jun 11, 2026
+endDate: Thu, Jun 11, 2026
 endTime: 10:00pm
 location: Donna Yeager Amphitheater at Memorial Park
 locationAddress: 2001 Jack Woods Parkway Independence, KY 41051
