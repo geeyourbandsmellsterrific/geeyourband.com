@@ -9,10 +9,10 @@ locationAddress: 51 Walnut St, Lawrenceburg, IN 47025
 member:
   - allison-wonderland
   - bobby-dingo
-  - j-j-aquarius
   - leo-dynamite
   - tommy-salami
   - will-power
+  - mysterious-mark
 image: /public/assets/images/download-1-.jpg
 ---
 Lawrenceburg, we’re bringing the Boogie!
