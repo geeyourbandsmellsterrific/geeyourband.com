@@ -1,8 +1,8 @@
 ---
 title: 70s Night in Downtown Lawrenceburg
-startDate: Jul 16 7:00
+startDate: Jul 16, 2026
 startTime: 7:00pm
-endDate: Jul 16
+endDate: Jul 16, 2026
 endTime: 9:00pm
 location: Lawrenceburg Civic Park
 locationAddress: 51 Walnut St, Lawrenceburg, IN 47025
