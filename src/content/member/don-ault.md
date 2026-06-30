@@ -5,7 +5,7 @@ adjective: ""
 instrument: Drums
 bio: ""
 main: false
-order: 5
+order: "7"
 photoColor: "#0084d1"
 photo: ""
 ---
