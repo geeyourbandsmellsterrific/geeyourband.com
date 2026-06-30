@@ -5,7 +5,7 @@ adjective: Copacetic
 instrument: Keyboard
 bio: ""
 main: true
-order: 7
+order: "2"
 photoColor: "#ff637e"
 photo: /public/assets/images/will-power.webp
 ---
