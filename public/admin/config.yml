@@ -90,6 +90,6 @@ collections:
   - { label: "Instrument", name: "instrument", required: false, widget: "string", hint: "Instrument(s) associated with each band member." }
   - { label: "Short Bio", name: "bio", widget: "string", required: false, hint: "Add a short biography to display under your member credits." }
   - { label: "Main Member?", name: "main", widget: "boolean", hint: "True = One of the main/primary members | False = Backup or alternate member." }
-  - { label: "Order", name: "order", widget: "string", hint: "Set the order of clinicians on the clinicians page. 1 = first, 2 = seconds, and so on..." }
+  - { label: "Order", name: "order", widget: "number", hint: "Set the order of members on the members page. 1 = first, 2 = seconds, and so on..." }
   - { label: "Portrait BG Color", name: "photoColor", widget: "string", required: false, hint: "Set the background color behind the portrait image. (Use HEX such as #ffffff or #000000)" }
   - { label: "Portrait Image", name: "photo", widget: "image", required: false, hint: "Add a square portrait image featuring a color head shot." }
