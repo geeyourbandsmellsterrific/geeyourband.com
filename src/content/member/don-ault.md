@@ -1,6 +1,6 @@
 ---
-name: Don Ault
-real_name: ""
+name: Disco Don
+real_name: Don Ault
 adjective: ""
 instrument: Drums
 bio: ""
