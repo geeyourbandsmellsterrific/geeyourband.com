@@ -15,4 +15,6 @@ member:
   - will-power
 image: /public/assets/images/st-johns-dry-ridge.jpg
 ---
-One of the best festivals on the west side is back, and so are we! Gee Your Band Smells Terrific returns to St. John’s Festival for an evening of disco, funk, yacht rock, and all your favorite ’70s hits. Grab your friends and meet us on the dance floor! For more information about the festival, visit: [www.sjbfamilyfest.com](https://www.sjbfamilyfest.com/)
+One of the best festivals on the west side is back, and so are we! Gee Your Band Smells Terrific returns to St. John’s Festival for an evening of disco, funk, yacht rock, and all your favorite ’70s hits. Grab your friends and meet us on the dance floor! 
+
+For more information about the festival, visit: [www.sjbfamilyfest.com](https://www.sjbfamilyfest.com/)
