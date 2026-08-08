@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import SongList from "@components/SongList.astro";
+
+const details = await getCollection("details");
+
+const songs = (await getCollection('song'))
+  .map((s) => ({ title: s.data?.title || '', artist: s.data?.artist || '' }))
+  .sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+---
+
+<BaseLayout
+  title="Songs"
+  description={"Songs from " +
+    details[0].data.name +
+    " - " +
+    details[0].data.description}
+>
+  <section id="songs" class="flex flex-col gap-4 px-3 pt-20 pb-32 text-center">
+    <div class="flex flex-col justify-center items-center gap-0 w-full text-center align-middle">
+        <div class="flex items-center mx-auto px-6 max-w-[1320px] container">
+        <div class="flex-1 bg-linear-to-r from-transparent to-pink-500 h-px" />
+        <h2 class="flex items-center gap-2 px-4 font-bold text-yellow-300 text-3xl md:text-4xl text-center">
+            <span>
+            {songs.length > 1 ? "SONGS" : "SONG"}
+            </span>
+        </h2>
+        <div class="flex-1 bg-linear-to-l from-transparent to-pink-500 h-px" />
+        </div>
+        <div
+        id="songs-list"
+        class="flex flex-col justify-center items-stretch gap-8 mx-auto px-10 pt-12 pb-4 w-full max-w-[1400px] overflow-hidden text-center"
+        >
+            <SongList songs={songs} />
+        </div>
+    </div>
+  </section>
+</BaseLayout>

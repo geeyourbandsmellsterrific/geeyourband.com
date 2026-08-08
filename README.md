@@ -152,6 +152,18 @@ An Astro configuration file. It's already set up for you, but you can extend it 
 
 A TypeScript configuration file. Optional. Includes TypeScript configuration options for your Astro project. Some features (like npm package imports) aren’t fully supported in the editor without a tsconfig.json file.
 
+### Song Conversion Script
+
+You can bulk convert songs from a csv of their Titles and Artists to the Markdown (.md) files needed for use by this repository.
+
+The input file should be called `songs.csv` and be placed in the `/scripts` folder alongside the `convert-songs-to-md.js` script file. The csv file should be two columns (Title and Artist) and must contain a header row (first row) with Title, Artist. Then, each subsequent row is the title, artist of each song.
+
+Run the script using `npm run convert` or `node scripts/convert-songs-to-md.js`.
+
+The output will be a folder called `songs` and contain Markdown (.md) files for each song from the csv file.
+The Markdown (.md) files in the outputted `/scripts/songs` folder should be copied and pasted into `/src/content/song/`. This will "import" the converted songs into the sites (the new songs will show up on the site and in the admin dashboard).
+
+
 ### Scripts and Event Handling
 
 You can add interactivity to your Astro components using standard HTML `<script>` tags. This allows you to send JavaScript to run in the browser and add functionality to your Astro components.

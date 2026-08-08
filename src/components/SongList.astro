@@ -1,0 +1,171 @@
+---
+const { songs = [] } = Astro.props;
+const normalized = songs.map((s: any) => ({
+  title: (s && s.data && s.data.title) || s.title || "",
+  artist: (s && s.data && s.data.artist) || s.artist || "",
+}));
+const serialized = JSON.stringify(normalized);
+const encoded = Buffer.from(serialized, 'utf8').toString('base64');
+---
+
+<section class="songs-list-component">
+  <div class="mx-auto max-w-4xl text-stone-200">
+    <div class="mx-auto w-full max-w-2xl">
+      <table class="w-full min-w-0 text-left border-collapse table-auto">
+      <thead>
+        <tr class="bg-stone-800 rounded-t-md">
+          <th role="button" tabindex="0" title="Sort by Title" aria-label="Sort by Title" class="bg-stone-800/95 hover:bg-white/5 px-2 py-3 rounded-md focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 font-semibold text-stone-100 text-sm uppercase tracking-wider active:translate-y-px cursor-pointer" data-key="title">
+            <span class="header-text">Title</span>
+            <span class="inline-block ml-2 w-4 sort-indicator" aria-hidden="true"></span>
+          </th>
+          <th role="button" tabindex="0" title="Sort by Artist" aria-label="Sort by Artist" class="bg-stone-800/95 hover:bg-white/5 px-2 py-3 rounded-md focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 font-semibold text-stone-300 text-sm uppercase tracking-wider active:translate-y-px cursor-pointer" data-key="artist">
+            <span class="header-text">Artist</span>
+            <span class="inline-block ml-2 w-4 sort-indicator" aria-hidden="true"></span>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="songs-body">
+        {normalized.slice(0, 10).map((song: any) => (
+          <tr class="border-stone-700 border-t">
+            <td class="px-2 py-3 font-medium text-base align-top title-cell" data-label="Title">{song.title}</td>
+            <td class="px-2 py-3 text-stone-400 text-sm artist-cell" data-label="Artist">{song.artist}</td>
+          </tr>
+        ))}
+      </tbody>
+      </table>
+
+      <div class="flex justify-center items-center gap-12 max-[432px]:gap-6 mt-4 w-full songs-pagination"></div>
+    </div>
+  </div>
+
+  <script data-payload={encoded} type="application/json"></script>
+
+  <script type="module">
+    const scriptEl = document.currentScript;
+    const container = scriptEl && scriptEl.parentElement ? scriptEl.parentElement : document.querySelector('.songs-list-component');
+    const dataEl = container ? container.querySelector('script[type="application/json"]') : null;
+    const encodedPayload = dataEl ? dataEl.dataset.payload || '' : '';
+    const data = encodedPayload ? JSON.parse(atob(encodedPayload)) : [];
+
+    const PER_PAGE = 20;
+    let sortKey = 'title';
+    let sortDir = 1; // 1 = asc, -1 = desc
+    let page = 1;
+
+    const tbody = container.querySelector('.songs-body');
+    const pagination = container.querySelector('.songs-pagination');
+    let headers = container.querySelectorAll('thead th[data-key]');
+    if (!headers || headers.length === 0) {
+      headers = container.querySelectorAll('thead th');
+    }
+
+    function compare(a, b) {
+      const A = (a[sortKey] || '').toLowerCase();
+      const B = (b[sortKey] || '').toLowerCase();
+      if (A < B) return -1 * sortDir;
+      if (A > B) return 1 * sortDir;
+      return 0;
+    }
+
+    function updateHeaderIndicators() {
+      headers.forEach((h) => {
+        const key = h.getAttribute('data-key');
+        const indicator = h.querySelector('.sort-indicator');
+        if (!indicator) return;
+        if (key === sortKey) {
+          indicator.textContent = sortDir === 1 ? '▲' : '▼';
+          h.setAttribute('aria-sort', sortDir === 1 ? 'ascending' : 'descending');
+          h.classList.add('text-stone-100');
+          h.classList.remove('text-stone-300');
+        } else {
+          indicator.textContent = '';
+          h.removeAttribute('aria-sort');
+          h.classList.remove('text-stone-100');
+          h.classList.add('text-stone-300');
+        }
+      });
+    }
+
+    function render() {
+      if (!tbody || !pagination) return;
+      tbody.innerHTML = '';
+      const sorted = data.slice().sort(compare);
+      const total = sorted.length;
+      const pages = Math.max(1, Math.ceil(total / PER_PAGE));
+      if (page > pages) page = pages;
+      const start = (page - 1) * PER_PAGE;
+      const pageItems = sorted.slice(start, start + PER_PAGE);
+
+      for (const s of pageItems) {
+        const tr = document.createElement('tr');
+        tr.className = 'border-t border-stone-700';
+
+        const tdTitle = document.createElement('td');
+        tdTitle.className = 'py-3 px-2 align-top title-cell text-base font-medium';
+        tdTitle.setAttribute('data-label', 'Title');
+        tdTitle.textContent = s.title;
+
+        const tdArtist = document.createElement('td');
+        tdArtist.className = 'py-3 px-2 artist-cell text-sm text-stone-400';
+        tdArtist.setAttribute('data-label', 'Artist');
+        tdArtist.textContent = s.artist;
+
+        tr.appendChild(tdTitle);
+        tr.appendChild(tdArtist);
+        tbody.appendChild(tr);
+      }
+
+      // pagination
+      pagination.innerHTML = '';
+      if (pages > 1) {
+        const prev = document.createElement('button');
+        prev.textContent = 'Prev';
+        prev.disabled = page === 1;
+        prev.className = 'text-lg px-3 py-1 rounded-md border border-stone-400/12 hover:bg-white/5 disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2';
+        prev.title = 'Previous page';
+        prev.setAttribute('aria-label', 'Previous page');
+        prev.addEventListener('click', () => { page--; render(); });
+        pagination.appendChild(prev);
+
+        const pageInfo = document.createElement('span');
+        pageInfo.textContent = `Page ${page} of ${pages}`;
+        pageInfo.className = 'px-2 text-xs text-center';
+        pageInfo.setAttribute('role', 'status');
+        pageInfo.setAttribute('aria-live', 'polite');
+        pageInfo.title = `Page ${page} of ${pages}`;
+        pagination.appendChild(pageInfo);
+
+        const next = document.createElement('button');
+        next.textContent = 'Next';
+        next.disabled = page === pages;
+        next.className = 'text-lg px-3 py-1 rounded-md border border-stone-400/12 hover:bg-white/5 disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2';
+        next.title = 'Next page';
+        next.setAttribute('aria-label', 'Next page');
+        next.addEventListener('click', () => { page++; render(); });
+        pagination.appendChild(next);
+      }
+
+      updateHeaderIndicators();
+    }
+
+    headers.forEach((h) => {
+      h.addEventListener('click', () => {
+        const key = h.getAttribute('data-key');
+        if (sortKey === key) sortDir = -sortDir; else { sortKey = key; sortDir = 1; }
+        page = 1;
+        render();
+      });
+      // keyboard support: Enter or Space to activate sort
+      h.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Enter' || ev.key === ' ') {
+          ev.preventDefault();
+          h.click();
+        }
+      });
+    });
+
+    // initial indicator update + render
+    updateHeaderIndicators();
+    render();
+  </script>
+</section>

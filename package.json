@@ -1,14 +1,15 @@
 {
   "name": "geeyourband",
   "type": "module",
-  "version": "1.33.0",
+  "version": "1.34.0",
   "scripts": {
     "astro": "astro dev",
     "decap": "npx decap-server",
     "dev": "npm-run-all --parallel astro decap",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "convert": "node scripts/convert-songs-to-md.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",

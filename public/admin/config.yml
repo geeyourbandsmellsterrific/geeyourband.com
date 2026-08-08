@@ -56,6 +56,23 @@ collections:
       minimize_collapsed: true
       summary: "{{fields.keyword}}"
       field: { label: Keyword, name: keyword, widget: string, hint: "Keyword that describes any aspect of the band which someone may use to search for the band." }
+- name: "member" # Used in routes, e.g., /admin/collections/blog. Is also the key when fetching data from the CMS.
+  label: "Members" # Used in the admin dashboard UI
+  label_singular: "Member" # Used in the admin dashboard UI
+  description: "Members are used to fill out the band members section." # Used in the admin dashboard UI
+  identifier_field: name # The field that will be used to identify the document in the CMS
+  folder: "src/content/member" # The path to the folder where the documents are stored
+  create: true # Allow users to create new documents in this collection
+  fields:
+  - { label: "Nickname", name: "name", widget: "string", hint: "Memorable nickname for each band member." }
+  - { label: "Real Name", name: "real_name", required: false, widget: "string", hint: "Enter your full name." }
+  - { label: "Adjective", name: "adjective", required: false, widget: "string", hint: "Catchy and unique adjective to describe each band member." }
+  - { label: "Instrument", name: "instrument", required: false, widget: "string", hint: "Instrument(s) associated with each band member." }
+  - { label: "Short Bio", name: "bio", widget: "string", required: false, hint: "Add a short biography to display under your member credits." }
+  - { label: "Main Member?", name: "main", widget: "boolean", hint: "True = One of the main/primary members | False = Backup or alternate member." }
+  - { label: "Order", name: "order", widget: "number", hint: "Set the order of members on the members page. 1 = first, 2 = seconds, and so on..." }
+  - { label: "Portrait BG Color", name: "photoColor", widget: "string", required: false, hint: "Set the background color behind the portrait image. (Use HEX such as #ffffff or #000000)" }
+  - { label: "Portrait Image", name: "photo", widget: "image", required: false, hint: "Add a square portrait image featuring a color head shot." }
 - name: "show" # Used in routes, e.g., /admin/collections/blog. Is also the key when fetching data from the CMS.
   label: "Shows" # Used in the admin dashboard UI
   label_singular: "Show" # Used in the admin dashboard UI
@@ -76,20 +93,13 @@ collections:
   - { label: "Featured Image", name: "image", widget: "image", required: false, hint: "Add a photo to display at the top of the show." }
   - { label: "Featured Image Caption", name: "imageAlt", widget: "string", required: false, hint: "Add a caption to describe the featured image." }
   - { label: "Tags", name: "tags", widget: "list", required: false, hint: "Add comma-separated tags to help categorize your show. (Don't press space!)" }
-- name: "member" # Used in routes, e.g., /admin/collections/blog. Is also the key when fetching data from the CMS.
-  label: "Members" # Used in the admin dashboard UI
-  label_singular: "Member" # Used in the admin dashboard UI
-  description: "Members are used to fill out the band members section." # Used in the admin dashboard UI
-  identifier_field: name # The field that will be used to identify the document in the CMS
-  folder: "src/content/member" # The path to the folder where the documents are stored
+- name: "song" # Used in routes, e.g., /admin/collections/blog. Is also the key when fetching data from the CMS.
+  label: "Songs" # Used in the admin dashboard UI
+  label_singular: "Song" # Used in the admin dashboard UI
+  description: "Songs that can be/are played by the band." # Used in the admin dashboard UI
+  identifier_field: title # The field that will be used to identify the document in the CMS
+  folder: "src/content/song" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
   fields:
-  - { label: "Nickname", name: "name", widget: "string", hint: "Memorable nickname for each band member." }
-  - { label: "Real Name", name: "real_name", required: false, widget: "string", hint: "Enter your full name." }
-  - { label: "Adjective", name: "adjective", required: false, widget: "string", hint: "Catchy and unique adjective to describe each band member." }
-  - { label: "Instrument", name: "instrument", required: false, widget: "string", hint: "Instrument(s) associated with each band member." }
-  - { label: "Short Bio", name: "bio", widget: "string", required: false, hint: "Add a short biography to display under your member credits." }
-  - { label: "Main Member?", name: "main", widget: "boolean", hint: "True = One of the main/primary members | False = Backup or alternate member." }
-  - { label: "Order", name: "order", widget: "number", hint: "Set the order of members on the members page. 1 = first, 2 = seconds, and so on..." }
-  - { label: "Portrait BG Color", name: "photoColor", widget: "string", required: false, hint: "Set the background color behind the portrait image. (Use HEX such as #ffffff or #000000)" }
-  - { label: "Portrait Image", name: "photo", widget: "image", required: false, hint: "Add a square portrait image featuring a color head shot." }
+  - { label: "Title", name: "title", widget: "string", hint: "Title of the song." }
+  - { label: "Artist", name: "artist", widget: "string", hint: "Artist of the song. (Use the same spelling and formatting for each artist - e.g. always 'Bee Gees' - not 'The Bee Gees')" }

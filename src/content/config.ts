@@ -66,8 +66,18 @@ const membersCollection = defineCollection({
 		}),
 });
 
+const songsCollection = defineCollection({
+	type: "content",
+	schema: () =>
+		z.object({
+			title: z.string(),
+			artist: z.string(),
+		}),
+});
+
 export const collections = {
 	details: detailsCollection,
 	show: showsCollection,
 	member: membersCollection,
+	song: songsCollection,
 };

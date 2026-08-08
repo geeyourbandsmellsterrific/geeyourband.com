@@ -6,6 +6,7 @@ import CardShow from "@components/CardShow.astro";
 import { Image } from "astro:assets";
 import { marked } from "marked";
 import { parseShowStart } from "@utils/utils.ts";
+import SongList from "@components/SongList.astro";
 
 const details = await getCollection("details");
 const homepage_content = await marked.parse(
@@ -33,6 +34,10 @@ const shows = (await getCollection("show"))
     const bStart = parseShowStart(b);
     return aStart.getTime() - bStart.getTime();
   });
+
+const songs = (await getCollection('song'))
+  .map((s) => ({ title: s.data?.title || '', artist: s.data?.artist || '' }))
+  .sort((a, b) => (a.title || '').localeCompare(b.title || ''));
 ---
 
 <HomeLayout
@@ -225,6 +230,25 @@ const shows = (await getCollection("show"))
       </section>
     )
   }
+
+  {/* Songs Section */}
+  <section id="songs" class="relative bg-black pt-52 pb-32">
+    <div class="z-10 relative mx-auto px-4 container">
+      <div class="flex items-center mb-12">
+        <div class="flex-1 bg-linear-to-r from-transparent to-orange-500 h-px">
+        </div>
+        <h2
+          class="flex items-center gap-2 px-4 font-bold text-yellow-300 text-3xl md:text-4xl text-center"
+        >
+          {songs.length > 1 ? "SONGS" : "SONG"}
+        </h2>
+        <div class="flex-1 bg-linear-to-l from-transparent to-orange-500 h-px">
+        </div>
+      </div>
+
+      <SongList songs={songs} />
+    </div>
+  </section>
 
   {/* Tip Section */}
   <section
