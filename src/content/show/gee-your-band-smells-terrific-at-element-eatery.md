@@ -13,6 +13,6 @@ member:
   - leo-dynamite
   - tommy-salami
   - will-power
-image: /public/assets/images/elementeatery_logo.svg
+image: /public/assets/images/elementeatery_logo.png
 ---
 Dinner, drinks and amazing live music! The Patio is open, bring your lawn chairs & Come to Element Eatery to celebrate the best of the 70s. No cover. Tons of free parking. 9 individual food choices and a full bar with over 40 taps!
