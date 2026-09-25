@@ -4,6 +4,7 @@ startDate: Sep 18, 2026
 startTime: 8:00pm
 endDate: Sep 18, 2026
 endTime: 11:59pm
+location: MVP Sports Bar and Grill
 locationAddress: 6923 Plainfield Rd, Cincinnati, OH 45236
 member:
   - allison-wonderland
