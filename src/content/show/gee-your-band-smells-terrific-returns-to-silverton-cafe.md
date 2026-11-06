@@ -3,7 +3,7 @@ title: Gee, Your Band Smells Terrific Returns to Silverton Cafe
 startDate: Nov 14, 2026
 startTime: 8:00pm
 endDate: Nov 14, 2026
-endTime: 11:59pm
+endTime: 12:00am
 location: Silverton Cafe
 locationAddress: 7201 Montgomery Rd, Cincinnati, OH 45236
 member:
